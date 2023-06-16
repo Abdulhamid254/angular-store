@@ -2,7 +2,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-products-header',
-  templateUrl: `products-header.component.html`,
+  templateUrl: `./products-header.component.html`,
   
 })
 export class ProductsHeaderComponent implements OnInit {
