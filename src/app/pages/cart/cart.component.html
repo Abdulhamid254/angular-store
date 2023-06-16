@@ -59,7 +59,7 @@
     <ng-container matColumnDef="action">
       <th mat-header-cell *matHeaderCellDef>
         <button
-        
+          (click)="onClearCart()"
           mat-raised-button
           color="warn"
           class="float-right"
@@ -69,7 +69,7 @@
       </th>
       <td mat-cell *matCellDef="let element">
         <button
-          
+           (click)="onRemoveFromCart(element)"
           mat-mini-fab
           color="warn"
           class="float-right"

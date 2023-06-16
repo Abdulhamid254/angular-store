@@ -15,7 +15,7 @@ export class AppComponent  implements OnInit{
 
   // above in the template html we are passing the cart to header component
   constructor(private cartService: CartService) {}
-// here behaviour subject coming to play taking info from our header component to dispalaye them here by subscribing to our observable & receiving the _cart from headercomponent
+// here behaviour subject coming to play taking info from our home component to dispalaye them here on header component by subscribing to our observable & receiving the _cart from headercomponent
   ngOnInit() {
     this.cartService.cart.subscribe((_cart) => {
       this.cart = _cart;

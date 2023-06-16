@@ -29,7 +29,7 @@ export class CartService {
     // emmiting this value so that any of the component that is subscribed to the cart can catch the value
     this.cart.next({items});
     this._snackBar.open('1 item added to cart.','Ok', {duration:3000});
-    console.log(this.cart.value);
+    // console.log(this.cart.value);
     
   }
 
@@ -46,4 +46,13 @@ export class CartService {
       duration:3000
     })
   }
+  removeFromCart(item: CartItem): void{
+     const filteredItems = this.cart.value.items.filter(
+      (_item) => _item.id !== item.id
+     );
+     this.cart.next({ items: filteredItems});
+     this._snackBar.open('1 Item removed from cart.', 'Ok', {
+      duration:3000
+    })
+   }
 }
