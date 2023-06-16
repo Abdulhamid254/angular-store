@@ -24,6 +24,7 @@ import { ProductsHeaderComponent } from './pages/home/home-components/home-compo
 import { FiltersComponent } from './pages/home/home-components/filters/filters.component';
 import { ProductBoxComponent } from './pages/home/home-components/product-box/product-box.component';
 import { CartComponent } from './pages/cart/cart.component';
+import { CartService } from './services/cart.service';
 
 
 
@@ -56,7 +57,7 @@ import { CartComponent } from './pages/cart/cart.component';
     MatInputModule,
     MatSnackBarModule,
   ],
-  providers: [],
+  providers: [CartService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
