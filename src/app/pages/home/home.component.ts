@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
   cols = 3;
+  category: string | undefined;
 
   //we are able to use the colsNum here because we used the output event emmitter to share data from the products-header to the this home component
 
@@ -17,6 +18,10 @@ export class HomeComponent implements OnInit {
 
   onColumnsCountChange(colsNum: number){
     this.cols = colsNum;
+  }
+
+  onShowCategory(newCategory: string):void{
+      this.category = newCategory;
   }
 
 }
