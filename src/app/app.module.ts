@@ -23,6 +23,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { ProductsHeaderComponent } from './pages/home/home-components/home-components/products-header.component';
 import { FiltersComponent } from './pages/home/home-components/filters/filters.component';
 import { ProductBoxComponent } from './pages/home/home-components/product-box/product-box.component';
+import { CartComponent } from './pages/cart/cart.component';
 
 
 
@@ -33,7 +34,8 @@ import { ProductBoxComponent } from './pages/home/home-components/product-box/pr
     HomeComponent,
     ProductsHeaderComponent,
     FiltersComponent,
-    ProductBoxComponent
+    ProductBoxComponent,
+    CartComponent
     
   ],
   imports: [
