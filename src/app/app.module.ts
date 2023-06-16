@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
   import {MatSidenavModule} from '@angular/material/sidenav';
-     import {MatGridListModule} from '@angular/material/grid-list';
+    import { MatGridListModule } from '@angular/material/grid-list';
     import {MatMenuModule} from '@angular/material/menu';
      import {MatButtonModule} from '@angular/material/button';
     import {MatCardModule} from '@angular/material/card';
@@ -22,6 +22,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ProductsHeaderComponent } from './pages/home/home-components/home-components/products-header.component';
 import { FiltersComponent } from './pages/home/home-components/filters/filters.component';
+import { ProductBoxComponent } from './pages/home/home-components/product-box/product-box.component';
 
 
 
@@ -31,7 +32,8 @@ import { FiltersComponent } from './pages/home/home-components/filters/filters.c
     HeaderComponent,
     HomeComponent,
     ProductsHeaderComponent,
-    FiltersComponent
+    FiltersComponent,
+    ProductBoxComponent
     
   ],
   imports: [
