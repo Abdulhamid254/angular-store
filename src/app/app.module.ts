@@ -12,6 +12,7 @@ import { BrowserModule } from '@angular/platform-browser';
      import {MatToolbarModule} from '@angular/material/toolbar';
      import {MatTableModule} from '@angular/material/table';
      import {MatBadgeModule} from '@angular/material/badge';
+     import {MatInputModule} from '@angular/material/input';
      import {MatSnackBarModule} from '@angular/material/snack-bar';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -19,12 +20,16 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
+import { ProductsHeaderComponent } from './pages/home/home-components/products-header/products-header.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    HomeComponent
+    HomeComponent,
+    ProductsHeaderComponent
+    
   ],
   imports: [
     BrowserModule,
@@ -41,6 +46,7 @@ import { HomeComponent } from './pages/home/home.component';
     MatToolbarModule,
     MatTableModule,
     MatBadgeModule,
+    MatInputModule,
     MatSnackBarModule,
   ],
   providers: [],
