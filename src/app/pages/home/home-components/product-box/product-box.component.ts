@@ -10,14 +10,7 @@ import { Product } from 'src/app/models/product.model';
 export class ProductBoxComponent implements OnInit {
  // full widthmode here is we want when we show only one item per row that it should take the maximum available space
   @Input() fullWidthMode = false;
-  product: Product | undefined = {
-      id: 1,
-    title: 'snickers',
-    price: 150,
-    category: 'Shoes',
-    description: 'Description',
-    image: 'https://via.placeholder.com/150',
-  }
+  @Input() product: Product | undefined ;
 
   //oUTput helps us add event emitter for communication purposes between the child & parent component...like for us to be able to use this addtocart method in the home component
   @Output() addToCart = new EventEmitter();
