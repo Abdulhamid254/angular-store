@@ -1,5 +1,5 @@
-<mat-card class="mb-4">
-    <div class="flex justify-between">
+<mat-card class="mb-0 bg-slate-700">
+    <div class="flex justify-between text-white">
         <div>
             <button mat-button [matMenuTriggerFor]="sortByMenu">
                 Sort by {{sort}}
@@ -11,8 +11,8 @@
             </mat-menu>
         </div>
 
-        <div class="flex items-center">
-            <div>
+        <div>
+            <div class="text-white">
                 <button mat-button [matMenuTriggerFor]="menu">
                     Show {{ itemsShowCount }}
                     <mat-icon>expand_more</mat-icon>

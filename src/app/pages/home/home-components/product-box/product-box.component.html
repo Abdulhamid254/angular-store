@@ -1,8 +1,9 @@
-<mat-card *ngIf="product" [ngClass]="{'text-center': !fullWidthMode}">
-    <!-- ng class helps us togive styling conditionals -->
-   <div [ngClass]="{flex: fullWidthMode}">
 
-    <img class="mb-1 mx-auto h-[200px]"
+<mat-card *ngIf="product" [ngClass]="{'text-center': !fullWidthMode}" >
+    <!-- ng class helps us togive styling conditionals -->
+   <div [ngClass]="{flex: fullWidthMode}" class="relative bg-white z-30 p-10  ">
+
+    <img class="mb-1 mx-auto h-[200px] w-[150px]"
     [ngClass]="{'h-200px': !fullWidthMode, 'h-[360px]':fullWidthMode}"
      [src]="product.image" />
      <!-- DIV HOUSING THE DESC -->
@@ -10,14 +11,15 @@
      [ngClass]="{'px-8 flex flex-col justify-between': fullWidthMode}">
       <div>
         <h5>{{product.category}}</h5>
-        <p class="truncate hover:whitespace-normal">{{product.title}}</p>
+        <h4 class="truncate hover:whitespace-normal">{{product.title}}</h4>
         <p *ngIf="fullWidthMode">{{product.description}}</p> 
+        
     </div>
 
     <div class="flex justify-between">
         <span class="text-red-400">{{ product.price | currency: 'Ksh'}}</span>
         <button (click)="onAddToCart()">
-            <mat-icon class="text-gray-500">shopping_cart</mat-icon>
+            <mat-icon class="text-yellow-500">shopping_cart</mat-icon>
         </button>
     </div>
    </div>

@@ -1,20 +1,23 @@
-<mat-drawer-container [autosize]="true" class="min-h-full max-w-7xl mx-auto border-x">
+<mat-drawer-container [autosize]="true" class="bg-gray-200">
     <mat-drawer mode="side" opened class="p-6">
       <app-filters (showCategory)="onShowCategory($event)"></app-filters>
     </mat-drawer>
 
     <mat-drawer-content class="p-6">
-        <app-banner [images]="images"></app-banner>
         <app-products-header
          (sortChange)="onSortChange($event)"
          (itemsCountChange)="onItemsCountChange($event)"
-         (columnsCountChange)="onColumnsCountChange($event)"> </app-products-header>
+         (columnsCountChange)="onColumnsCountChange($event)"> 
+        </app-products-header>
+
+        <app-banner [images]="images"></app-banner>
+        
         <mat-grid-list
           gutterSize="16"
           [cols]="cols"
-          [rowHeight]="rowHeight"
-        >
-        <mat-grid-tile *ngFor="let product of products">
+          [rowHeight]="rowHeight">
+          <!-- class="grid grid-flow-row-dense md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 " style not working coz we using material grid -->
+        <mat-grid-tile *ngFor="let product of products" class="md:-mt-52" >
               <app-product-box 
                 [product] = "product"
               (addToCart)="onAddToCart($event)"

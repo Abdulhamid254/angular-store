@@ -7,5 +7,11 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
+.button {
+  padding: 0.5rem;
+  font-size: 0.75rem;
+  background-image: linear-gradient(to bottom, #ffed4a, #feb563);
+}
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
