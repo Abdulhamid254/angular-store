@@ -4,6 +4,7 @@
     </mat-drawer>
 
     <mat-drawer-content class="p-6">
+        <app-banner [images]="images"></app-banner>
         <app-products-header
          (sortChange)="onSortChange($event)"
          (itemsCountChange)="onItemsCountChange($event)"

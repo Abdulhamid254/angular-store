@@ -27,6 +27,10 @@ import { CartComponent } from './pages/cart/cart.component';
 import { CartService } from './services/cart.service';
 import { StoreService } from './services/store.service';
 import { HttpClientModule } from '@angular/common/http';
+import { BannerComponent } from './pages/home/home-components/banner/banner/banner.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+
 
 
 
@@ -38,7 +42,9 @@ import { HttpClientModule } from '@angular/common/http';
     ProductsHeaderComponent,
     FiltersComponent,
     ProductBoxComponent,
-    CartComponent
+    CartComponent,
+    BannerComponent,
+   
     
   ],
   imports: [
@@ -59,6 +65,9 @@ import { HttpClientModule } from '@angular/common/http';
     MatInputModule,
     MatSnackBarModule,
     HttpClientModule,
+    NgbModule,
+    
+    
   ],
   providers: [CartService,StoreService],
   bootstrap: [AppComponent]

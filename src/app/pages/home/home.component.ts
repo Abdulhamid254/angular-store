@@ -25,7 +25,20 @@ export class HomeComponent implements OnInit, OnDestroy {
   // productsSubscription prevents memory leaks unsubscribes from our observable
 
   //we are able to use the colsNum here because we used the output event emmitter to share data from the products-header to the this home component
-
+   images = [
+    {
+      url:'https://links.papareact.com/gi1',
+      title: 'pic1',
+    },
+    {
+      url:'https://links.papareact.com/6ff',
+      title: 'pic2',
+    },
+    {
+      url:'https://links.papareact.com/7ma',
+      title: 'pic3',
+    }
+   ]
   constructor(private cartService: CartService, private storeService: StoreService) { }
 
   ngOnInit(): void {
