@@ -32,6 +32,28 @@ export class CartService {
     // console.log(this.cart.value);
     
   }
+removeQuantity(item: CartItem): void {
+    let itemForRemoval!: CartItem;
+
+    let filteredItems = this.cart.value.items.map((_item) => {
+      if (_item.id === item.id) {
+        _item.quantity--;
+        if (_item.quantity === 0) {
+          itemForRemoval = _item;
+        }
+      }
+
+      return _item;
+    });
+      if (itemForRemoval) {
+        filteredItems = this.removeFromCart(itemForRemoval, false);
+        // false here is sending a flag so that the user is not notified
+      }
+      this.cart.next({ items: filteredItems})
+      this._snackBar.open('1 item removed from cart.', 'Ok',{
+        duration: 3000
+      })
+  }
 
   
   getTotal(items: Array<CartItem>):number { 
@@ -46,13 +68,17 @@ export class CartService {
       duration:3000
     })
   }
-  removeFromCart(item: CartItem): void{
+  removeFromCart(item: CartItem,update= true):  Array<CartItem>{
      const filteredItems = this.cart.value.items.filter(
       (_item) => _item.id !== item.id
      );
-     this.cart.next({ items: filteredItems});
-     this._snackBar.open('1 Item removed from cart.', 'Ok', {
-      duration:3000
+
+     if (update) {
+        this.cart.next({ items: filteredItems});
+        this._snackBar.open('1 Item removed from cart.', 'Ok', {
+        duration:3000
     })
+     }
+     return filteredItems;
    }
 }
